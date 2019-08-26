@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+
+    "outDir": "lib",
+    "rootDir": "src",
+    "module": "commonjs",
+    "composite": true,
+    "target": "es6",
+
+    "moduleResolution": "node",
+    "strict": true,
+    "skipLibCheck": true,
+    "noEmitOnError": false,
+    "noUnusedParameters": true,
+    "noUnusedLocals": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "importHelpers": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "removeComments": true,
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true
+  },
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "lib",
+    "__tests__/**/*",
+    "__mocks__/**/*"
+  ]
+}
