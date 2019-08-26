@@ -1,6 +1,6 @@
 {
   "name": "@michaelgatesdev/common",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Various helpful things for my projects",
   "main": "index.js",
   "repository": "https://github.com/MichaelGatesDev/node-libs",
