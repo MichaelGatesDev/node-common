@@ -2,7 +2,7 @@
   "compilerOptions": {
 
     "outDir": "lib",
-    "rootDir": "src",
+    "rootDir": "./",
     "module": "commonjs",
     "composite": true,
     "target": "es6",
@@ -24,7 +24,7 @@
     "declarationMap": true
   },
   "include": [
-    "src/**/*.ts"
+    "**/*.ts"
   ],
   "exclude": [
     "node_modules",
