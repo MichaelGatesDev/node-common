@@ -24,6 +24,9 @@
     "declaration": true,
     "declarationMap": true
   },
+  "include": [
+    "src"
+  ],
   "exclude": [
     "node_modules",
     "dist",
