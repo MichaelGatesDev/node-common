@@ -1,11 +1,13 @@
 {
   "name": "@michaelgatesdev/common",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Various helpful things for my projects",
   "repository": "https://github.com/MichaelGatesDev/node-libs",
   "author": "michaelgatesdev",
   "license": "MIT",
   "private": false,
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
   "scripts": {
     "eslint": "npx eslint --ext .ts,.tsx \".\" ",
     "build": "tsc --build",
