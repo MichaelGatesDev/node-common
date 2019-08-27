@@ -1,8 +1,7 @@
 {
   "name": "@michaelgatesdev/common",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Various helpful things for my projects",
-  "main": "index.js",
   "repository": "https://github.com/MichaelGatesDev/node-libs",
   "author": "michaelgatesdev",
   "license": "MIT",
@@ -13,7 +12,7 @@
     "test": "jest --forceExit --coverage --verbose --detectOpenHandles"
   },
   "files": [
-    "lib"
+    "src"
   ],
   "devDependencies": {
     "@babel/core": "^7.5.4",
