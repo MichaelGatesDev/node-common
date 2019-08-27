@@ -1,21 +1,21 @@
 {
   "name": "@michaelgatesdev/common",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Various helpful things for my projects",
   "repository": "https://github.com/MichaelGatesDev/node-libs",
   "author": "michaelgatesdev",
   "license": "MIT",
   "private": false,
-  "main": "lib/index.js",
-  "typings": "lib/index.d.ts",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "typescript": {
+    "definition": "dist/index.d.ts"
+  },
   "scripts": {
     "eslint": "npx eslint --ext .ts,.tsx \".\" ",
     "build": "tsc --build",
     "test": "jest --forceExit --coverage --verbose --detectOpenHandles"
   },
-  "files": [
-    "src"
-  ],
   "devDependencies": {
     "@babel/core": "^7.5.4",
     "@babel/preset-env": "^7.5.4",

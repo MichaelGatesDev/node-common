@@ -1,8 +1,9 @@
 {
   "compilerOptions": {
 
-    "outDir": "lib",
-    "rootDir": "./",
+    "rootDir": "./src",
+    "outDir": "./dist",
+
     "module": "commonjs",
     "composite": true,
     "target": "es6",
@@ -23,12 +24,9 @@
     "declaration": true,
     "declarationMap": true
   },
-  "include": [
-    "**/*.ts"
-  ],
   "exclude": [
     "node_modules",
-    "lib",
+    "dist",
     "__tests__/**/*",
     "__mocks__/**/*"
   ]
