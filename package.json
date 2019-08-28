@@ -1,6 +1,6 @@
 {
   "name": "@michaelgatesdev/common",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Various helpful things for my projects",
   "repository": "https://github.com/MichaelGatesDev/node-libs",
   "author": "michaelgatesdev",
@@ -12,22 +12,18 @@
     "definition": "dist/index.d.ts"
   },
   "scripts": {
-    "eslint": "npx eslint --ext .ts,.tsx \".\" ",
     "build": "tsc --build",
-    "test": "jest --forceExit --coverage --verbose --detectOpenHandles"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.5.4",
-    "@babel/preset-env": "^7.5.4",
-    "@babel/preset-typescript": "^7.3.3",
-    "@types/jest": "^24.0.15",
-    "@types/node": "^12.7.2",
-    "babel-jest": "^24.8.0",
-    "jest": "^24.9.0",
-    "ts-jest": "^24.0.2"
+    "test": "jest"
   },
   "dependencies": {
-    "tslib": "^1.10.0",
+    "tslib": "^1.10.0"
+  },
+  "devDependencies": {
+    "@types/node": "^12.7.2",
+    "@typescript-eslint/eslint-plugin": "^2.0.0",
+    "@typescript-eslint/parser": "^2.0.0",
+    "eslint": "^6.2.2",
+    "tslint": "^5.19.0",
     "typescript": "^3.5.3"
   }
 }

@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
 
-    "rootDir": "./src",
-    "outDir": "./dist",
+    "rootDir": "src",
+    "outDir": "dist",
 
     "module": "commonjs",
     "composite": true,
@@ -24,13 +24,10 @@
     "declaration": true,
     "declarationMap": true
   },
-  "include": [
-    "src"
-  ],
   "exclude": [
     "node_modules",
     "dist",
-    "__tests__/**/*",
+    "src/__tests__/**/*",
     "__mocks__/**/*"
   ]
 }
