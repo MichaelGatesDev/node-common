@@ -1,6 +1,2 @@
-src
 node_modules
-tsconfig.tsbuildinfo
-tslint.json
-yarn-error.log
-yarn.lock
+src

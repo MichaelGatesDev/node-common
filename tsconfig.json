@@ -1,13 +1,10 @@
 {
   "compilerOptions": {
-
     "rootDir": "src",
     "outDir": "dist",
-
     "module": "commonjs",
     "composite": true,
     "target": "es6",
-
     "moduleResolution": "node",
     "strict": true,
     "skipLibCheck": true,
@@ -24,6 +21,10 @@
     "declaration": true,
     "declarationMap": true
   },
+  "include": [
+    "src/**/*",
+    "__tests__/**/*"
+  ],
   "exclude": [
     "node_modules",
     "dist",
