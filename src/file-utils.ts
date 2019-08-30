@@ -54,9 +54,9 @@ export class FileUtils {
         }
     }
 
-    public static async writeJSON(path: string, content: any): Promise<boolean> {
+    public static async writeJSON(path: string, content: any, replacer?: ((this: any, key: string, value: any) => any) | undefined): Promise<boolean> {
         try {
-            await fsPromises.writeFile(path, JSON.stringify(content, null, 4));
+            await fsPromises.writeFile(path, JSON.stringify(content, replacer, 4));
             return true;
         } catch (error) {
             return false;
