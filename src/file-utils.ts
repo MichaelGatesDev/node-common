@@ -32,6 +32,16 @@ export class FileUtils {
         }
     }
 
+    public static async isDirectoryEmpty(path: string): Promise<boolean> {
+        try {
+            if (!await this.isDirectory(path)) { return false; }
+            const files = await fsPromises.readdir(path);
+            return files.length === 0;
+        } catch (error) {
+            return false;
+        }
+    }
+
     public static async isFile(path: string): Promise<boolean> {
         try {
             const stat = await fsPromises.stat(path);
