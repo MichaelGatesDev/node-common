@@ -1,6 +1,6 @@
 {
   "name": "@michaelgatesdev/common",
-  "version": "1.0.15",
+  "version": "1.0.15-fix",
   "description": "Various helpful things for my projects",
   "repository": "https://github.com/MichaelGatesDev/node-libs",
   "author": "michaelgatesdev",
@@ -28,15 +28,15 @@
   "devDependencies": {
     "@types/jest": "^24.0.18",
     "@types/node": "^12.7.2",
+    "@typescript-eslint/eslint-plugin": "^2.0.0",
+    "@typescript-eslint/parser": "^2.0.0",
+    "eslint": "^6.2.2",
     "jest": "~24.8.0",
     "rimraf": "^2.6.3",
     "ts-jest": "^24.0.0",
     "ts-node": "^8.3.0",
     "tslint": "~5.18.0",
     "tsutils": "~3.14.0",
-    "typescript": "~3.5.0",
-    "@typescript-eslint/eslint-plugin": "^2.0.0",
-    "@typescript-eslint/parser": "^2.0.0",
-    "eslint": "^6.2.2"
+    "typescript": "~3.5.0"
   }
 }
