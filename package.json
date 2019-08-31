@@ -1,6 +1,6 @@
 {
   "name": "@michaelgatesdev/common",
-  "version": "1.0.15-fix",
+  "version": "1.0.16",
   "description": "Various helpful things for my projects",
   "repository": "https://github.com/MichaelGatesDev/node-libs",
   "author": "michaelgatesdev",
@@ -15,6 +15,7 @@
     "dist"
   ],
   "scripts": {
+    "prepublish": "yarn clean && yarn build",
     "clean": "rimraf coverage dist tmp tsconfig.tsbuildinfo *-error.log",
     "build": "tsc --build",
     "build:watch": "tsc -w",

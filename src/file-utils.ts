@@ -73,4 +73,14 @@ export class FileUtils {
         }
     }
 
+    public static async readJSON<T>(path: string): Promise<T | undefined> {
+        try {
+            const buffer: string = await fsPromises.readFile(path, "utf-8");
+            const json = JSON.parse(buffer);
+            return json as T;
+        } catch (error) {
+            return undefined;
+        }
+    }
+
 }
