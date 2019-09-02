@@ -2,18 +2,27 @@ export class EnumUtils {
 
     public static normalizeString<TEnum>(enumObj: TEnum, str: string): string | undefined {
         str = str.toLowerCase().replace(/[\s\-\_]/g, "");
-        const keys = (Object.keys(enumObj) as (keyof TEnum)[]).filter((k): boolean => typeof enumObj[k] !== "string");
+        const keys = (Object.keys(enumObj) as Array<keyof TEnum>).filter((k): boolean => typeof enumObj[k] !== "string");
         for (const key of keys) {
             const tempKey = key.toString().toLowerCase();
-            if (str === tempKey) return key.toString();
+            if (str === tempKey) { return key.toString(); }
         }
         return undefined;
+    }
+
+    public static values<TEnum>(enumObj: TEnum): string[] | undefined {
+        const result: string[] = [];
+        const keys = (Object.keys(enumObj) as Array<keyof TEnum>).filter((k): boolean => typeof enumObj[k] !== "string");
+        for (const key of keys) {
+            result.push(key.toString());
+        }
+        return result;
     }
 
     public static parse<T>(type: T, str: string): T[keyof T] | undefined {
         const normalized = EnumUtils.normalizeString(type, str);
         if (normalized !== undefined) {
-            const casted = str as keyof T;
+            const casted = normalized as keyof T;
             return type[casted];
         }
         return undefined;
@@ -23,5 +32,5 @@ export class EnumUtils {
         const normalized = EnumUtils.normalizeString(type, str);
         return normalized !== undefined;
     }
-    
+
 }
