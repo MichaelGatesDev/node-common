@@ -1,6 +1,6 @@
 const TRUE_STRINGS: string[] = [
-    "true", "on", "yes", "enabled", "active", "1"
-]
+    "true", "on", "yes", "enabled", "active", "1",
+];
 
 export class StringUtils {
 
@@ -10,6 +10,19 @@ export class StringUtils {
      */
     public static isBlank(str: string): boolean {
         return (!str || /^\s*$/.test(str));
+    }
+
+    /**
+     * Splits up a string based on title casing
+     * Example: ThisIsASmushedString => [this, is, a, smushed, string]
+     * Example 2: ThisIs A LongString => [This, Is , A , Long, String]
+     * @param str The string to split up
+     */
+    public static splitCompressedTitle(str: string): string[] {
+        const match = str.match(/([A-Z]?[^A-Z]*)/g);
+        if (match === null) { return []; }
+        const split = match.slice(0, -1);
+        return split;
     }
 
     /**
@@ -23,7 +36,6 @@ export class StringUtils {
             .map((word): string => word.charAt(0).toUpperCase() + word.slice(1))
             .join(" ");
     }
-
 
     public static parseBoolean(text: string): boolean {
         text = text.toLowerCase().trim();
