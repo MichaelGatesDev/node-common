@@ -2,6 +2,7 @@ import { EnumUtils } from "../enum-utils";
 
 enum TestEnum {
     Alpha,
+    AlphaBeta,
     Beta,
     Charlie,
 }
@@ -25,4 +26,13 @@ test("should not parse invalid enums", (): void => {
     expect(EnumUtils.parse(TestEnum, "ALFA")).toBeUndefined();
     expect(EnumUtils.parse(TestEnum, "beita")).toBeUndefined();
     expect(EnumUtils.parse(TestEnum, "charlo")).toBeUndefined();
+});
+
+test("should not confuse enums", (): void => {
+    expect(EnumUtils.parse(TestEnum, "Alpha")).not.toBe(EnumUtils.parse(TestEnum, "AlphaBeta"));
+    expect(EnumUtils.parse(TestEnum, "Beta")).not.toBe(EnumUtils.parse(TestEnum, "AlphaBeta"));
+    expect(EnumUtils.parse(TestEnum, "AlphaBeta")).not.toBe(EnumUtils.parse(TestEnum, "Alpha"));
+    expect(EnumUtils.parse(TestEnum, "AlphaBeta")).not.toBe(EnumUtils.parse(TestEnum, "Beta"));
+    expect(EnumUtils.parse(TestEnum, "Alpha Beta")).not.toBe(EnumUtils.parse(TestEnum, "Alpha"));
+    expect(EnumUtils.parse(TestEnum, "Alpha_Beta")).not.toBe(EnumUtils.parse(TestEnum, "Beta"));
 });
