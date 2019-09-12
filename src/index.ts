@@ -1,3 +1,4 @@
+export * from "./array-utils";
 export * from "./downloader";
 export * from "./enum-utils";
 export * from "./file-utils";
