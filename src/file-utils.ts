@@ -1,5 +1,5 @@
 import { promises as fsPromises } from "fs";
-import * as fs from "fs";
+import * as fse from "fs-extra";
 
 export class FileUtils {
 
@@ -15,12 +15,7 @@ export class FileUtils {
     }
 
     public static async checkExists(path: string): Promise<boolean> {
-        try {
-            await fsPromises.access(path, fs.constants.R_OK);
-            return true;
-        } catch (error) {
-            return false;
-        }
+        return await fse.pathExists(path);
     }
 
     public static async isDirectory(path: string): Promise<boolean> {
@@ -82,5 +77,4 @@ export class FileUtils {
             return undefined;
         }
     }
-
 }
