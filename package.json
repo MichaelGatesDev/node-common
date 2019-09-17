@@ -2,7 +2,7 @@
   "name": "@michaelgatesdev/common",
   "version": "1.1.0",
   "description": "Various helpful things for my projects",
-  "repository": "https://github.com/MichaelGatesDev/node-libs",
+  "repository": "git@github.com:MichaelGatesDev/node-common.git",
   "author": "michaelgatesdev",
   "license": "MIT",
   "private": false,
