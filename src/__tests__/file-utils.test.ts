@@ -11,6 +11,16 @@ test("should check if directory is empty", async () => {
     const emptyRes: boolean = await FileUtils.isDirectoryEmpty(dirPath);
     expect(emptyRes).toBe(true);
 });
+test("should copy the directory", async () => {
+    // copy directory
+    const copyRes: boolean = await FileUtils.copy(dirPath, `${dirPath}-copy`);
+    expect(copyRes).toBe(true);
+});
+test("should delete the copied directory", async () => {
+    // delete json
+    const delRes: boolean = await FileUtils.delete(`${dirPath}-copy`);
+    expect(delRes).toBe(true);
+});
 test("should delete a directory", async () => {
     // delete dir
     const delRes: boolean = await FileUtils.delete(dirPath);
@@ -32,6 +42,16 @@ test("should read the json file", async () => {
     // read json
     const writeRes: ExampleInterface | undefined = await FileUtils.readJSON<ExampleInterface>(jsonPath);
     expect(writeRes).toBeDefined();
+});
+test("should copy the json file", async () => {
+    // read json
+    const copyRes: boolean = await FileUtils.copy(jsonPath, `${jsonPath}.copy`);
+    expect(copyRes).toBe(true);
+});
+test("should delete the copied json file", async () => {
+    // delete json
+    const delRes: boolean = await FileUtils.delete(`${jsonPath}.copy`);
+    expect(delRes).toBe(true);
 });
 test("should delete the json file", async () => {
     // delete json

@@ -77,4 +77,13 @@ export class FileUtils {
             return undefined;
         }
     }
+
+    public static async copy(path: string, destination: string): Promise<boolean> {
+        try {
+            await fse.copy(path, destination);
+            return true;
+        } catch (error) {
+            return false;
+        }
+    }
 }
