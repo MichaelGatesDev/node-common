@@ -46,4 +46,12 @@ export class StringUtils {
         return str.toLowerCase().replace(/\s/g, "-");
     }
 
+    public static pad(str: string, padStr: string, length: number): string {
+        let result = str;
+        while (result.length < length) {
+            result = padStr + str;
+        }
+        return result;
+    }
+
 }
