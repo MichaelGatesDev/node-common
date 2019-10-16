@@ -1,4 +1,5 @@
 import colors from "colors";
+import { StringUtils } from "./string-utils";
 
 export enum LogLevel {
     Debug,
@@ -66,7 +67,7 @@ export class Logger {
 
     private static doLog(color: colors.Color, level: LogLevel, message: string): void {
         const today = new Date();
-        const time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        const time = StringUtils.pad(`${today.getHours()}`, "0", 2) + ":" + StringUtils.pad(`${today.getMinutes()}`, "0", 2) + ":" + StringUtils.pad(`${today.getSeconds()}`, "0", 2);
 
         console.log(`${color(`[${time}][${LogLevel[level].toString().toUpperCase()}]`)}: ${message}`);
     }
